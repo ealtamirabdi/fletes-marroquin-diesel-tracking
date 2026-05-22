@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diesel Tracker FMS — Fletes Marroquín</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; background: #0d1b35; color: white;
+           display: flex; flex-direction: column; align-items: center; justify-content: center;
+           min-height: 100vh; margin: 0; text-align: center; }
+    .logo { font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+    .orange { color: #F5820A; }
+    .sub { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 32px; }
+    .btn { background: #0057A8; color: white; padding: 14px 32px; border-radius: 12px;
+           text-decoration: none; font-weight: 600; font-size: 1rem;
+           border: none; cursor: pointer; transition: background 0.2s; }
+    .btn:hover { background: #003f7d; }
+    .loading { color: rgba(255,255,255,0.4); font-size: 0.8rem; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <div class="logo">Diesel Tracker <span class="orange">FMS</span></div>
+  <div class="sub">Fletes Marroquín · Monitoreo de precios México</div>
+  <a id="btn" class="btn" href="https://tract-matter-topics-jay.trycloudflare.com">Abrir Sistema →</a>
+  <p class="loading" id="msg">Redirigiendo...</p>
+  <script>
+    const url = "https://tract-matter-topics-jay.trycloudflare.com";
+    document.getElementById('btn').href = url;
+    setTimeout(() => { window.location.href = url; }, 1500);
+  </script>
+</body>
+</html>
